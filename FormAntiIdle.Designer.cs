@@ -37,6 +37,7 @@ partial class FormAntiIdle
         numericUpDownSeconds = new NumericUpDown();
         comboBoxAplicaciones = new ComboBox();
         bTakeScreenshot = new Button();
+        lTimesSaved = new Label();
         groupBox1.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)numericUpDownSeconds).BeginInit();
         SuspendLayout();
@@ -77,9 +78,11 @@ partial class FormAntiIdle
         // 
         numericUpDownSeconds.Location = new Point(98, 26);
         numericUpDownSeconds.Margin = new Padding(3, 2, 3, 2);
+        numericUpDownSeconds.Minimum = new decimal(new int[] { 10, 0, 0, 0 });
         numericUpDownSeconds.Name = "numericUpDownSeconds";
         numericUpDownSeconds.Size = new Size(96, 23);
         numericUpDownSeconds.TabIndex = 0;
+        numericUpDownSeconds.Value = new decimal(new int[] { 10, 0, 0, 0 });
         numericUpDownSeconds.ValueChanged += numericUpDownSeconds_ValueChanged;
         // 
         // comboBoxAplicaciones
@@ -101,11 +104,21 @@ partial class FormAntiIdle
         bTakeScreenshot.UseVisualStyleBackColor = true;
         bTakeScreenshot.Click += bTakeScreenshot_Click;
         // 
+        // lTimesSaved
+        // 
+        lTimesSaved.AutoSize = true;
+        lTimesSaved.Location = new Point(16, 128);
+        lTimesSaved.Name = "lTimesSaved";
+        lTimesSaved.Size = new Size(130, 15);
+        lTimesSaved.TabIndex = 3;
+        lTimesSaved.Text = "# times saved from idle";
+        // 
         // FormAntiIdle
         // 
         AutoScaleDimensions = new SizeF(7F, 15F);
         AutoScaleMode = AutoScaleMode.Font;
         ClientSize = new Size(379, 304);
+        Controls.Add(lTimesSaved);
         Controls.Add(bTakeScreenshot);
         Controls.Add(comboBoxAplicaciones);
         Controls.Add(groupBox1);
@@ -118,6 +131,7 @@ partial class FormAntiIdle
         groupBox1.PerformLayout();
         ((System.ComponentModel.ISupportInitialize)numericUpDownSeconds).EndInit();
         ResumeLayout(false);
+        PerformLayout();
     }
 
     #endregion
@@ -129,4 +143,5 @@ partial class FormAntiIdle
     private NumericUpDown numericUpDownSeconds;
     private ComboBox comboBoxAplicaciones;
     private Button bTakeScreenshot;
+    private Label lTimesSaved;
 }
