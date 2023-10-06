@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>anti_idle_win.Program</StartupObject>
     <ApplicationIcon>pulse.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="pulse.ico" />
+  </ItemGroup>
 
 </Project>
